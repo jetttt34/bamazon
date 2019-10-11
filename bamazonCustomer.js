@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-var inquire = require('inquire');
+var inquirer = require('inquire');
 var Table = require('cli-table2');
 
 var connection = mysql.createConnection({
@@ -41,24 +41,57 @@ var display = function(){
 
 
 var shopping = function(){
-    inquirer.prompt({
-        name: 'productToBuy',
-        type: 'input',
-        message: 'please enter the Product ID of the item you wish to purchase.!'
-    }).then(function(answer1){
-        var selection = answer1.inquirer.response.productToBuy;
-        connection.query('SELECT * FROM products WHERE Id=?', selection, function(err,res){
-            if(err) throw err;
-            if(res.length === 0){
-                console.log('That product doesnt exist, Please enter a Product Id from the list above')
-           
-            shopping()
-            }else{
-            console.log('All is well');
-            connection.end // right here!
-            }
-        });
-    });
-};
+    
+inquirer = require("inquirer");
+inquirer
+ .prompt([
+   {
+     type: 'input',
+     name: 'productToBuy',
+     message: 'please enter the Product ID of the item you wish to purchase.!',
+      },
+ ])
+ .then(answers => {
+   console.info('Answer:', answers.productToBuy);
+   connection.query('SELECT * FROM products WHERE Id=?', selection, function(err,res){
+    if(err) throw err;
+    if(res.length === 0){
+    console.log('That product doesnt exist, Please enter a Product Id from the list above');
+   
+    shopping();
+    }else{
+    inquirer
+        .prompt([
+            {
+                name: "quantity",
+                type: "input",
+                message: "How many items would you like to purchase?"
+            },
+        ])
+        .then(answers1 => {
+            console.info('Answer:', answers1.productToBuy);
+            var quantity = answers1.
+            if ()
+        })
+    connection.end // right here!
+ };
 
+   });
+   });
+};
 display();
+shopping();
+
+//add this:
+connection.query('SELECT * FROM products WHERE Id=?', selection, function(err,res){
+    console.info('Answer:', answers.productToBuy);
+    //add this
+    var selection = answers.productToBuy;
+     connection.query('SELECT * FROM products WHERE Id=?', selection, function(err,res){
+    
+    (sorry, I kept accidentally hitting enter..)
+    console.info('Answer:', answers.productToBuy);
+    //add this
+    var selection = answers.productToBuy;
+    //then this should work:
+    connection.query('SELECT * FROM products WHERE Id=?', selection, function(err,res){
