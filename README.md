@@ -1,1 +1,2 @@
 # bamazon
+bamazonCustomer.js was created as a backend application to manage a customer purchasing application that only contains 10 iteams. Using mySQL, and inquirer, I was able to create a database linked to my JavaScript file that would display a table of the product along with the price. 
