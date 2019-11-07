@@ -1,2 +1,13 @@
-# bamazon
-bamazonCustomer.js was created as a backend application to manage a customer purchasing application that only contains 10 iteams. Using mySQL, and inquirer, I was able to create a database linked to my JavaScript file that would display a table of the product along with the price. 
+# Bamazon-Node.js-MySQL-App
+Bamazon is an Amazon-like storefront using MySQL for the database and Node.js for terminal based actions.
+
+Screenshots of program working:
+
+Manager View - Options
+![Manager View - Options](./images/pic1.PNG)
+
+Manager View - View Products
+![Manager View - View Products](./images/pic2.PNG)
+
+Manager View - View Inventory
+![Manager View - View Inventory](./images/pic3.PNG)

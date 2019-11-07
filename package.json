@@ -6,7 +6,7 @@
   "dependencies": {
     "cli-table2": "^0.2.0",
     "cli-table3": "^0.5.1",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "inquire": "^0.4.8",
     "inquirer": "^7.0.0",
     "msql": "^1.0.3",
